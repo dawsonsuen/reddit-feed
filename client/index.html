@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Reddit Feed App</title>
+		<link rel="stylesheet" href="style.css" />
+		<link
+			href="https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,300;1,300&display=swap"
+			rel="stylesheet"
+		/>
+
+		<script src="app.js" type="text/javascript"></script>
+	</head>
+	<body class="container" onload="subscriptions()">
+		<header class="header">
+			<h1>Add to my feed:</h1>
+		</header>
+
+		<div class="main">
+			<div class="search-bar">
+				<span class="prefix-r">r/</span>
+				<input type="text" id="subReddit" placeholder="AskReddit" />
+				<button id="subscribe" onclick="subscribe()">SUBSCRIBE</button>
+			</div>
+
+			<div id="subCounts"></div>
+
+			<div class="subRedditList" id="subRedditList"></div>
+		</div>
+	</body>
+	<script></script>
+</html>
