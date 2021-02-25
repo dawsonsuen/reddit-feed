@@ -1,0 +1,1 @@
+Please go to the Server folder and run npm install then npm run start. Thank you!
