@@ -12,7 +12,7 @@ const populateListToHtml = channelList => {
 					<div><img id="avatar" src="${channel.avatar}" alt="" onerror="this.src='public/err.png'"/></div>
 					<div id="redditInfo">
 						<div id="name" class="info-item">r/  ${channel.channelName}</div>
-						<a id="link" href="${channel.topPostUrl}">${channel.topPostTitle}</a>
+						<a id="link" href="${channel.topPostUrl}" target="_blank">${channel.topPostTitle}</a>
 						<div id="date">
 							<span>${channel.topPostScore}<img id="thump-up" src="public/up.webp"></span>
 							<span style="margin:10px">|</span>
