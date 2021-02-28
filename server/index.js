@@ -1,8 +1,8 @@
-import express from 'express';
-import { fileURLToPath } from 'url';
-import path from 'path';
-import * as controller from './controller.js';
-import bodyParser from 'body-parser';
+import express from "express";
+import { fileURLToPath } from "url";
+import path from "path";
+import * as controller from "./controller.js";
+import bodyParser from "body-parser";
 
 const app = express();
 const port = 3000;
@@ -13,24 +13,25 @@ const __dirname = path.dirname(__filename);
 app.use(bodyParser.urlencoded({ extended: false }));
 app.use(bodyParser.json());
 
-app.get('/subscriptions', (req, res) => {
-	controller.subscriptions(req, res);
+app.get("/subscriptions", (req, res) => {
+  controller.subscriptions(req, res);
 });
 
-app.post('/subscribe', (req, res) => {
-	controller.subscribe(req, res);
+app.post("/subscribe", (req, res) => {
+  controller.subscribe(req, res);
 });
 
-app.delete('/subscribe/:channelName', (req, res) => {
-	controller.unSubscribe(req, res);
+app.delete("/subscribe/:channelName", (req, res) => {
+  controller.unSubscribe(req, res);
 });
 
-app.use(express.static(path.join(__dirname, '../client')));
+// static files
+app.use(express.static(path.join(__dirname, "../client")));
 
-app.get('*', (req, res) => {
-	res.sendFile(path.resolve(__dirname, '../client/index.html'));
+app.get("*", (req, res) => {
+  res.sendFile(path.resolve(__dirname, "../client/index.html"));
 });
 
 app.listen(port, () => {
-	console.log(`Example app listening at http://localhost:${port}`);
+  console.log(`Example app listening at http://localhost:${port}`);
 });

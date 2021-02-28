@@ -19,6 +19,7 @@ html {
   flex-direction: column;
   max-width: 500px;
   align-items: center;
+  opacity: 0.7;
 }
 
 .search-bar {
@@ -49,13 +50,13 @@ input[type="text"] {
 }
 
 ::placeholder {
-  color:grey;
+  color: grey;
   opacity: 0.5;
 }
 
 #subscribe {
   color: #ffffff;
-  background-color: #46b4b4; 
+  background-color: #46b4b4;
   /* outline: 0; */
   font-weight: bold;
   padding: 0 20px;
@@ -64,16 +65,13 @@ input[type="text"] {
   border-bottom-right-radius: 5px;
 }
 
-button:hover {
-  background-color: lightcoral;
-}
-
 #subCounts {
   display: flex;
   justify-content: flex-start;
   padding: 20px 3px;
   font-size: 0.7rem;
   color: #615f03;
+  opacity: 0.7;
 }
 
 .subRedditList {
@@ -87,6 +85,7 @@ button:hover {
   border-style: solid;
   border-width: 1px;
   border-radius: 5px;
+  border-color: lightgray;
   height: 8rem;
   padding-bottom: 1rem;
   margin-top: 1rem;
@@ -102,6 +101,7 @@ button:hover {
   float: right;
   border: none;
   padding: 10px;
+  font-weight: bold;
 }
 
 #avatar {
@@ -134,7 +134,3 @@ button:hover {
   width: 1rem;
   margin-left: 5px;
 }
-
-
-
-
