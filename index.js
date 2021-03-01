@@ -26,10 +26,10 @@ app.delete("/subscribe/:channelName", (req, res) => {
 });
 
 // static files
-app.use(express.static(path.join(__dirname, "../client")));
+app.use(express.static(path.join(__dirname, "./client")));
 
 app.get("*", (req, res) => {
-  res.sendFile(path.resolve(__dirname, "../client/index.html"));
+  res.sendFile(path.resolve(__dirname, "./client/index.html"));
 });
 
 app.listen(port, () => {
