@@ -37,7 +37,7 @@ const subscribe = () => {
     window.alert("Please remove the space between your input!");
   }
 
-  fetch("http://localhost:3000/subscribe", {
+  fetch("https://reddity-feed-challenge.herokuapp.com/subscribe", {
     method: "POST",
     headers: {
       "Content-Type": "application/json",
@@ -54,7 +54,7 @@ const subscribe = () => {
 };
 
 const subscriptions = () => {
-  fetch("http://localhost:3000/subscriptions")
+  fetch("https://reddity-feed-challenge.herokuapp.com/subscriptions")
     .then((response) => response.json())
     .then((data) => {
       populateListToHtml(data.channelList);
@@ -65,7 +65,7 @@ const subscriptions = () => {
 };
 
 const unSubscribe = (channelName) => {
-  fetch(`http://localhost:3000/subscribe/${channelName}`, {
+  fetch(`https://reddity-feed-challenge.herokuapp.com/subscribe/${channelName}`, {
     method: "DELETE",
   })
     .then((response) => response.json())

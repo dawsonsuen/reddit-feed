@@ -5,7 +5,8 @@ import * as controller from "./controller.js";
 import bodyParser from "body-parser";
 
 const app = express();
-const port = 3000;
+export const port = process.env.PORT || 3000;
+export const host = process.env.HOST || 'localhost';
 
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
@@ -33,5 +34,5 @@ app.get("*", (req, res) => {
 });
 
 app.listen(port, () => {
-  console.log(`Example app listening at http://localhost:${port}`);
+  console.log(`Example app listening at ${host}:${port}`);
 });
